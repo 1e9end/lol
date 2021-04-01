@@ -62,7 +62,7 @@
     <div id = "cookies">
         <div class = "v-center">
             <img src ="https://image.flaticon.com/icons/png/512/614/614131.png" style="margin: 0 auto; height: 20vh"></img><br>
-            This website uses cookies to personalize your data<br><button>Click to accept</button>
+            This website uses cookies to personalize your data<br>Please wait until site has loaded<br><button>Click to accept</button>
         </div>
     </div> 
     <iframe src="thing.mp3" style="display:none" id="iframeAudio">
@@ -75,16 +75,24 @@
 </body>
 <script>
     window.addEventListener("click", event => {
-        var cookies = document.querySelector("#cookies");
-        cookies.style.display = "none";
+        var audio = document.querySelector("audio");
+        console.log(audio);
+        console.log(audio.readyState);
+        if (audio.readyState == 4){
+            var cookies = document.querySelector("#cookies");
+            cookies.style.display = "none";
 
-        var footer = document.querySelector("#footer");
-        footer.style.display = "block";
+            var footer = document.querySelector("#footer");
+            footer.style.display = "block";
 
-        const audio = document.querySelector("audio");
-        audio.autoplay = true;
-        audio.loop = true;
-        audio.play();
+            
+            audio.autoplay = true;
+            audio.loop = true;
+            audio.play();
+        }
+        else{
+
+        }
     });
 </script>
 </html>
