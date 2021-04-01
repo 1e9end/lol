@@ -78,7 +78,7 @@
         var audio = document.querySelector("audio");
         console.log(audio);
         console.log(audio.readyState);
-        if (audio.readyState == 4){
+        if (audio.readyState >= 3){
             var cookies = document.querySelector("#cookies");
             cookies.style.display = "none";
 
