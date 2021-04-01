@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OG Meta Tags for Social Media Queries --> 
+    <meta property="og:title" content="Internet Lifehacks"/> 
+    <meta property="og:image" content="https://raw.githubusercontent.com/1e9end/lol/main/lifehacks.png"/>
+    <meta property="og:description" content="Download RAM, get free V-Bucks, all right here!" /> 
+    <meta property="og:url" content= "https://1e9end.github.io/lol"/> 
+    <meta property="og:type" content="website"/>
+
+    <title>Free Money</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{
+            overflow: hidden;
+            font-family: 'Open Sans';
+            margin: 0;
+        }
+        /* Header/Logo Title */
+        #header{
+            background: #2453FF;
+            padding: 15px;
+            height: 10vh;
+            color: white;
+        }
+        .v-center{
+            display: block;
+            position: relative; 
+            top: 50%; 
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        #footer{
+            background-color: #CCCCCC;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            display: none;
+        }
+        #cookies{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background-color: cyan;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "cookies">
+        <div class = "v-center">
+            <img src ="https://image.flaticon.com/icons/png/512/614/614131.png" style="margin: 0 auto; height: 20vh"></img><br>
+            This website uses cookies to personalize your data<br><button>Click to accept</button>
+        </div>
+    </div> 
+    <iframe src="thing.mp3" style="display:none" id="iframeAudio">
+    </iframe> 
+    <audio src="thing.mp3"></audio>
+    <img src = "https://media1.tenor.com/images/8c409e6f39acc1bd796e8031747f19ad/tenor.gif?itemid=17029825" width="100%"></img>
+    <div id = "footer">
+        Get trolled by <a href="https://1e9end.github.io/">1egend</a> lmao
+    </div>
+</body>
+<script>
+    window.addEventListener("click", event => {
+        var cookies = document.querySelector("#cookies");
+        cookies.style.display = "none";
+
+        var footer = document.querySelector("#footer");
+        footer.style.display = "block";
+
+        const audio = document.querySelector("audio");
+        audio.autoplay = true;
+        audio.loop = true;
+        audio.play();
+    });
+</script>
+</html>
